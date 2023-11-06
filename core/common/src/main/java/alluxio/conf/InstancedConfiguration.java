@@ -26,6 +26,7 @@ import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
+import edu.illinois.ConfigTracker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -159,6 +160,7 @@ public class InstancedConfiguration implements AlluxioConfiguration {
 
   @Override
   public boolean isSet(PropertyKey key) {
+    ConfigTracker.markParamAsUsed(key.getName());
     return mProperties.isSet(key) && isResolvable(key);
   }
 
@@ -344,6 +346,7 @@ public class InstancedConfiguration implements AlluxioConfiguration {
     for (Map.Entry<PropertyKey, Object> entry: mProperties.entrySet()) {
       String key = entry.getKey().getName();
       if (prefixKey.isNested(key)) {
+        ConfigTracker.markParamAsUsed(key);
         String suffixKey = key.substring(prefixKey.length() + 1);
         ret.put(suffixKey, entry.getValue());
       }
