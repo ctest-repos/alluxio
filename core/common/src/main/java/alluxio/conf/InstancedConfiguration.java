@@ -68,6 +68,10 @@ public class InstancedConfiguration implements AlluxioConfiguration {
    */
   public InstancedConfiguration(AlluxioProperties properties) {
     this(properties, false);
+    ConfigTracker.injectConfig((arg1, arg2) -> {
+      PropertyKey key = PropertyKey.fromString(arg1);
+      set(key, arg2);
+    });
   }
 
   /**
