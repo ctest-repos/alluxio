@@ -15,6 +15,7 @@ import static java.util.stream.Collectors.toSet;
 
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.Maps;
+import edu.illinois.ConfigTracker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -82,6 +83,7 @@ public class AlluxioProperties {
    */
   @Nullable
   public Object get(PropertyKey key) {
+    ConfigTracker.markParamAsUsed(key.getName());
     if (mUserProps.containsKey(key)) {
       return mUserProps.get(key).orElse(null);
     }
@@ -106,6 +108,23 @@ public class AlluxioProperties {
    */
   public void put(PropertyKey key, Object value, Source source) {
     if (!mUserProps.containsKey(key) || source.compareTo(getSource(key)) >= 0) {
+      ConfigTracker.markParmaAsSet(key.getName());
+      mUserProps.put(key, Optional.ofNullable(value));
+      mSources.put(key, source);
+      mHash.markOutdated();
+    }
+  }
+
+  /**
+   * Puts the key value pair specified by users.
+   *
+   * @param key key to put
+   * @param value value to put
+   * @param source the source of this value for the key
+   */
+  public void put_purged(PropertyKey key, Object value, Source source) {
+    if (!mUserProps.containsKey(key) || source.compareTo(getSource(key)) >= 0) {
+      ConfigTracker.markParmaAsSet(key.getName());
       mUserProps.put(key, Optional.ofNullable(value));
       mSources.put(key, source);
       mHash.markOutdated();
@@ -150,7 +169,7 @@ public class AlluxioProperties {
         // is made dynamic
         propertyKey = PropertyKey.getOrBuildCustom(key);
       }
-      put(propertyKey, propertyKey.parseValue(value), source);
+      put_purged(propertyKey, propertyKey.parseValue(value), source);
     }
     mHash.markOutdated();
   }

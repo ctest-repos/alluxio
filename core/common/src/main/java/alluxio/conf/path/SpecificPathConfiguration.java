@@ -20,6 +20,7 @@ import alluxio.conf.PropertyKey;
 import alluxio.conf.Source;
 
 import com.google.common.collect.ImmutableMap;
+import edu.illinois.ConfigTracker;
 
 import java.time.Duration;
 import java.util.List;
@@ -80,6 +81,7 @@ public final class SpecificPathConfiguration implements AlluxioConfiguration {
 
   @Override
   public boolean isSet(PropertyKey key) {
+    ConfigTracker.markParamAsUsed(key.getName());
     return conf(key).isSet(key);
   }
 
@@ -163,7 +165,7 @@ public final class SpecificPathConfiguration implements AlluxioConfiguration {
     AlluxioProperties properties = mClusterConf.copyProperties();
     for (PropertyKey key : keySet()) {
       mPathConf.getConfiguration(mPath, key).ifPresent(
-          config -> properties.put(key, config.get(key), Source.PATH_DEFAULT));
+          config -> properties.put_purged(key, config.get(key), Source.PATH_DEFAULT));
     }
     return properties;
   }
