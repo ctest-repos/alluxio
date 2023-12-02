@@ -23,14 +23,11 @@ import alluxio.conf.PropertyKey;
 import alluxio.exception.runtime.NotFoundRuntimeException;
 import alluxio.exception.runtime.UnknownRuntimeException;
 
-import edu.illinois.CTestClass;
-import edu.illinois.CTestJUnit4Runner;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.rules.TemporaryFolder;
-import org.junit.runner.RunWith;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -52,8 +49,6 @@ import javax.annotation.Nullable;
 /**
  * Tests for the {@link FileUtils} class.
  */
-@RunWith(CTestJUnit4Runner.class)
-@CTestClass()
 public class FileUtilsTest {
 
   private String mWorkerDataFolderPerms = Configuration.global()

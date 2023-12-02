@@ -35,8 +35,6 @@ import alluxio.util.FormatUtils;
 import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
-import edu.illinois.CTestClass;
-import edu.illinois.CTestJUnit4Runner;
 import org.hamcrest.CoreMatchers;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -44,7 +42,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.rules.TemporaryFolder;
-import org.junit.runner.RunWith;
 
 import java.io.BufferedWriter;
 import java.io.Closeable;
@@ -65,8 +62,6 @@ import java.util.stream.IntStream;
 /**
  * Unit tests for the {@link alluxio.conf.InstancedConfiguration} class.
  */
-@RunWith(CTestJUnit4Runner.class)
-@CTestClass()
 public class InstancedConfigurationTest {
 
   private  InstancedConfiguration mConfiguration = Configuration.copyGlobal();
