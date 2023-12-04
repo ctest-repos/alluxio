@@ -108,7 +108,7 @@ public class AlluxioProperties {
    */
   public void put(PropertyKey key, Object value, Source source) {
     if (!mUserProps.containsKey(key) || source.compareTo(getSource(key)) >= 0) {
-      ConfigTracker.markParmaAsSet(key.getName());
+      ConfigTracker.markParamAsSet(key.getName());
       mUserProps.put(key, Optional.ofNullable(value));
       mSources.put(key, source);
       mHash.markOutdated();
@@ -124,7 +124,7 @@ public class AlluxioProperties {
    */
   public void put_purged(PropertyKey key, Object value, Source source) {
     if (!mUserProps.containsKey(key) || source.compareTo(getSource(key)) >= 0) {
-      ConfigTracker.markParmaAsSet(key.getName());
+      ConfigTracker.markParamAsSet(key.getName());
       mUserProps.put(key, Optional.ofNullable(value));
       mSources.put(key, source);
       mHash.markOutdated();
