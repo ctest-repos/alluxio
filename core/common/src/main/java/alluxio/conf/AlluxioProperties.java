@@ -67,7 +67,12 @@ public class AlluxioProperties {
   /**
    * Constructs a new instance of Alluxio properties.
    */
-  public AlluxioProperties() {}
+  public AlluxioProperties() {
+    ConfigTracker.injectConfig((arg1, arg2) -> {
+      PropertyKey key = PropertyKey.fromString(arg1);
+      set(key, arg2);
+    });
+  }
 
   /**
    * @param alluxioProperties properties to copy
@@ -138,6 +143,7 @@ public class AlluxioProperties {
    * @param value value to put
    */
   public void set(PropertyKey key, Object value) {
+    System.out.println("setProperty: " + key.getName() + " = " + value.toString());
     put(key, value, Source.RUNTIME);
   }
 

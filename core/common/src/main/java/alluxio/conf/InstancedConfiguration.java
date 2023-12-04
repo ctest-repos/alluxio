@@ -180,6 +180,7 @@ public class InstancedConfiguration implements AlluxioConfiguration {
    * @param value the value for the key
    */
   public void set(PropertyKey key, Object value) {
+    System.out.println("setProperty: " + key.getName() + " = " + value.toString());
     set(key, value, Source.RUNTIME);
   }
 

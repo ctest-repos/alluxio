@@ -11,6 +11,9 @@
 
 package alluxio.conf;
 
+import edu.illinois.CTestClass;
+import edu.illinois.CTestJUnit4Runner;
+
 import static alluxio.conf.PropertyKey.Builder.stringBuilder;
 import static java.util.stream.Collectors.toSet;
 import static org.hamcrest.core.Is.is;
@@ -25,6 +28,7 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import java.util.HashSet;
 import java.util.Map;
@@ -34,6 +38,8 @@ import java.util.Set;
 /**
  * Unit tests for the {@link AlluxioProperties} class.
  */
+@RunWith(CTestJUnit4Runner.class)
+@CTestClass
 public class AlluxioPropertiesTest {
 
   private AlluxioProperties mProperties = new AlluxioProperties();
