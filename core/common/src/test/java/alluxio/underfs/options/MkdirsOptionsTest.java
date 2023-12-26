@@ -11,6 +11,11 @@
 
 package alluxio.underfs.options;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
@@ -34,6 +39,8 @@ import java.util.Random;
 /**
  * Tests for the {@link MkdirsOptions} class.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class MkdirsOptionsTest {
 
   private final AlluxioConfiguration mConfiguration = Configuration.global();

@@ -11,6 +11,11 @@
 
 package alluxio.conf;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static alluxio.conf.PropertyKey.Builder.booleanBuilder;
 import static alluxio.conf.PropertyKey.Builder.intBuilder;
 import static org.junit.Assert.assertEquals;
@@ -35,6 +40,8 @@ import java.util.regex.Matcher;
 /**
  * Tests enum type {@link PropertyKey}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class PropertyKeyTest {
 
   private PropertyKey mTestProperty = booleanBuilder("alluxio.test.property")

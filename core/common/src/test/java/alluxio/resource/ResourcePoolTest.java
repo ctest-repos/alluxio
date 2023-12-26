@@ -11,6 +11,11 @@
 
 package alluxio.resource;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
@@ -32,6 +37,8 @@ import java.util.concurrent.TimeUnit;
 /**
  * Unit test for {@code ResourcePool} class.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class ResourcePoolTest {
 
   /**

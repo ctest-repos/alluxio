@@ -11,6 +11,11 @@
 
 package alluxio.refresh;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -21,6 +26,8 @@ import org.junit.Test;
 /**
  * Tests for the {@link TimeoutRefresh} class.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class TimeoutRefreshTest {
 
   /**

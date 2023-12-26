@@ -11,6 +11,11 @@
 
 package alluxio.conf.path;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Streams;
 import org.junit.Assert;
@@ -26,6 +31,8 @@ import java.util.stream.Collectors;
 /**
  * Tests {@link PrefixPathMatcher}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TrieNodeTest {
   @Test
   public void hasTerminalIncludeChildren() {

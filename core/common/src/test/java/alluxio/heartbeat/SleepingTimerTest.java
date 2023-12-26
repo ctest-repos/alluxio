@@ -11,6 +11,11 @@
 
 package alluxio.heartbeat;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.mock;
@@ -30,6 +35,8 @@ import java.time.Duration;
 /**
  * Unit tests for {@link SleepingTimer}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class SleepingTimerTest {
   private static final String THREAD_NAME = "sleepingtimer-test-thread-name";
   private static final long INTERVAL_MS = 500;

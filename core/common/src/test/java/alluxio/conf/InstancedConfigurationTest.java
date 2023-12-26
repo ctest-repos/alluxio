@@ -11,6 +11,11 @@
 
 package alluxio.conf;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static alluxio.conf.PropertyKey.Builder.intBuilder;
 import static alluxio.conf.PropertyKey.Builder.stringBuilder;
 import static java.lang.String.format;
@@ -62,6 +67,8 @@ import java.util.stream.IntStream;
 /**
  * Unit tests for the {@link alluxio.conf.InstancedConfiguration} class.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class InstancedConfigurationTest {
 
   private  InstancedConfiguration mConfiguration = Configuration.copyGlobal();

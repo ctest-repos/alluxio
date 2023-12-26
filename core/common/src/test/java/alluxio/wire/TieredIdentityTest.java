@@ -11,6 +11,11 @@
 
 package alluxio.wire;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
@@ -35,6 +40,8 @@ import java.util.Random;
 /**
  * Unit tests for {@link TieredIdentity}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TieredIdentityTest {
 
   private final InstancedConfiguration mConfiguration = alluxio.conf.Configuration.copyGlobal();

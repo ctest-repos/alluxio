@@ -11,6 +11,11 @@
 
 package alluxio.collections;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -27,6 +32,8 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 /**
  * Tests the {@link LockPool} class.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class LockPoolTest {
   private LockPool<Integer> mPool;
   private static final int LOW_WATERMARK = 8;

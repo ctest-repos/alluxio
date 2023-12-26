@@ -11,6 +11,11 @@
 
 package alluxio.worker.block.io;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import alluxio.exception.runtime.InternalRuntimeException;
 import alluxio.util.io.BufferUtils;
 
@@ -32,6 +37,8 @@ import java.nio.file.Paths;
 /**
  * Tests for the {@link LocalFileBlockWriter} class.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class LocalFileBlockWriterTest {
   private static final int TEST_BLOCK_SIZE = 1024;
 

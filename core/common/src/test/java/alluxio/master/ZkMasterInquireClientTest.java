@@ -11,6 +11,11 @@
 
 package alluxio.master;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import alluxio.AlluxioTestDirectory;
 import alluxio.Constants;
 import alluxio.exception.status.UnavailableException;
@@ -27,6 +32,8 @@ import org.junit.Test;
 
 import java.net.InetSocketAddress;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class ZkMasterInquireClientTest {
 
   private static final String ELECTION_PATH = "/election";

@@ -11,6 +11,11 @@
 
 package alluxio.util;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -22,6 +27,8 @@ import java.io.InterruptedIOException;
 /**
  * Unit tests for {@link ExceptionUtils}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class ExceptionUtilsTest {
   @Test
   public void isInterrupted() {

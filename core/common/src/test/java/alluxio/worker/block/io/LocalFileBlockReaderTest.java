@@ -11,6 +11,11 @@
 
 package alluxio.worker.block.io;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 
@@ -30,6 +35,8 @@ import java.nio.channels.ReadableByteChannel;
 /**
  * Tests for the {@link LocalFileBlockReader} class.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class LocalFileBlockReaderTest {
   private static final long TEST_BLOCK_SIZE = 1024;
   private LocalFileBlockReader mReader;

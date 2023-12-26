@@ -11,6 +11,11 @@
 
 package alluxio.util;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 
 import alluxio.Constants;
@@ -33,6 +38,8 @@ import java.util.Map;
 /**
  * Unit tests for {@link ConfigurationUtils}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class ConfigurationUtilsTest {
   @Test
   public void getSingleMasterRpcAddress() {

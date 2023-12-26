@@ -11,6 +11,11 @@
 
 package alluxio.underfs;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -28,6 +33,8 @@ import org.junit.Test;
 import java.io.Closeable;
 import java.util.Random;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class UnderFileSystemConfigurationTest {
 
   private InstancedConfiguration mConfiguration;

@@ -11,6 +11,11 @@
 
 package alluxio.concurrent;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
@@ -23,6 +28,8 @@ import java.util.List;
 /**
  * Tests for {@link CountingLatch}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class CountingLatchTest {
   private static final long SLEEP_MILLIS = 1000;
   private static final long STILL_BLOCKED = -1;

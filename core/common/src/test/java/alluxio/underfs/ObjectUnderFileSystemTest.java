@@ -11,6 +11,11 @@
 
 package alluxio.underfs;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
@@ -29,6 +34,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.SocketException;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class ObjectUnderFileSystemTest {
   private static final AlluxioConfiguration CONF = Configuration.global();
 

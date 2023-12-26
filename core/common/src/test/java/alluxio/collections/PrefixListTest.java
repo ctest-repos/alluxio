@@ -11,6 +11,11 @@
 
 package alluxio.collections;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -23,6 +28,8 @@ import java.util.List;
 /**
  * Unit tests for {@link PrefixList}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class PrefixListTest {
 
   /**

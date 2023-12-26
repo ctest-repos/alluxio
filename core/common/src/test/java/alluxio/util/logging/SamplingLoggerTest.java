@@ -11,6 +11,11 @@
 
 package alluxio.util.logging;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
@@ -25,6 +30,8 @@ import org.slf4j.Logger;
 /**
  * Unit tests for {@link SamplingLogger}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class SamplingLoggerTest {
   private Logger mBaseLogger;
   private SamplingLogger mSamplingLogger;

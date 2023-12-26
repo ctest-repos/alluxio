@@ -11,6 +11,11 @@
 
 package alluxio.util;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -19,6 +24,8 @@ import org.junit.Test;
 /**
  * Tests {@link IdUtils}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class IdUtilsTest {
   /**
    * Tests if output of {@link IdUtils#getRandomNonNegativeLong()} is non-negative.

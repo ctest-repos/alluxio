@@ -11,6 +11,11 @@
 
 package alluxio.collections;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotSame;
 
@@ -19,6 +24,8 @@ import org.junit.Test;
 /**
  * Unit tests for {@link Pair}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class PairTest {
   private static final String STR_TYPE = "test";
   private static final Integer INTEGER_TYPE = 7883;

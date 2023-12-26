@@ -11,6 +11,11 @@
 
 package alluxio.security.login;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -30,6 +35,8 @@ import javax.security.auth.login.LoginException;
  * Unit test for the login modules defined in {@link AlluxioLoginModule} and
  * used in {@link LoginModuleConfiguration}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class LoginModuleTest {
 
   /**

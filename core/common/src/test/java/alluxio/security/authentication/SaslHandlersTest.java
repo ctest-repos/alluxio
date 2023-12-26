@@ -11,6 +11,11 @@
 
 package alluxio.security.authentication;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import alluxio.conf.AlluxioConfiguration;
 import alluxio.conf.Configuration;
 import alluxio.exception.status.UnauthenticatedException;
@@ -25,6 +30,8 @@ import javax.security.auth.Subject;
 /**
  * Tests {@link SaslClientHandler} and {@link SaslServerHandler} implementations.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class SaslHandlersTest {
   private final AlluxioConfiguration mConfiguration = Configuration.global();
 

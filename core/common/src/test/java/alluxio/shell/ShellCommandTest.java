@@ -11,6 +11,11 @@
 
 package alluxio.shell;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
@@ -26,6 +31,8 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class ShellCommandTest {
   public static File createFileInDir(File dir, String fileName) throws IOException {
     File newFile = new File(Paths.get(dir.getAbsolutePath(), fileName).toString());

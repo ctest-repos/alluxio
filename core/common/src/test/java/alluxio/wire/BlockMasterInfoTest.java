@@ -11,6 +11,11 @@
 
 package alluxio.wire;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import alluxio.Constants;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -21,6 +26,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class BlockMasterInfoTest {
 
   @Test

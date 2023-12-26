@@ -11,6 +11,11 @@
 
 package alluxio.security.authentication;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 
 import alluxio.security.authentication.plain.PlainSaslServer;
@@ -32,6 +37,8 @@ import javax.security.sasl.SaslServer;
 /**
  * Tests the {@link PlainSaslServer} class.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class PlainSaslServerTest {
   private static byte sSEPARATOR = 0x00; // US-ASCII <NUL>
   private SaslServer mPlainSaslServer = null;

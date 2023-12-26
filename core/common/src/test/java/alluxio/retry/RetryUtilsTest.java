@@ -11,6 +11,11 @@
 
 package alluxio.retry;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
@@ -22,6 +27,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * Unit tests for {@link RetryUtils}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class RetryUtilsTest {
   @Test
   public void success() throws IOException {

@@ -11,6 +11,11 @@
 
 package alluxio.master;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.fail;
 
 import alluxio.Constants;
@@ -31,6 +36,8 @@ import java.util.List;
 /**
  * Unit tests for {@link PollingMasterInquireClient}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class PollingMasterInquireClientTest {
   @Rule
   public PortReservationRule mPort = new PortReservationRule();

@@ -11,6 +11,11 @@
 
 package alluxio;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertSame;
 
 import alluxio.conf.AlluxioConfiguration;
@@ -24,6 +29,8 @@ import org.junit.Test;
 /**
  * Unit tests for {@link AuthenticatedClientUserResource}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class AuthenticatedClientUserResourceTest {
   private static final String TESTCASE_USER = "userA";
   private static final String ORIGINAL_USER = "alluxio";

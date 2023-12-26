@@ -11,6 +11,11 @@
 
 package alluxio.util.proto;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertSame;
@@ -19,6 +24,8 @@ import alluxio.proto.meta.Block.BlockLocation;
 
 import org.junit.Test;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class BlockLocationUtilsTest {
   @Test
   public void testBlockLocationCached() {

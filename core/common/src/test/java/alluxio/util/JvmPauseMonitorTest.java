@@ -11,6 +11,11 @@
 
 package alluxio.util;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.greaterThanOrEqualTo;
 import static org.junit.Assert.assertEquals;
@@ -40,6 +45,8 @@ import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class JvmPauseMonitorTest {
 
   @Rule

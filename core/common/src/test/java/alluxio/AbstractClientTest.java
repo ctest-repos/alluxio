@@ -11,6 +11,11 @@
 
 package alluxio;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static alluxio.exception.ExceptionMessage.INCOMPATIBLE_VERSION;
 
 import alluxio.conf.Configuration;
@@ -35,6 +40,8 @@ import java.net.InetSocketAddress;
 /**
  * Unit tests for {@link AbstractClient}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class AbstractClientTest {
 
   private static final String SERVICE_NAME = "Test Service Name";

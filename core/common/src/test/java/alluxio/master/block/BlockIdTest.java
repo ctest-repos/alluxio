@@ -11,6 +11,11 @@
 
 package alluxio.master.block;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
@@ -18,6 +23,8 @@ import org.junit.Test;
 /**
  * Tests for the {@link BlockId} class.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class BlockIdTest {
 
   private static final long MAX_SEQUENCE_NUMBER = 16777215L;

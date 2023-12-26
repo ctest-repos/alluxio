@@ -11,6 +11,11 @@
 
 package alluxio.security.group;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -21,6 +26,8 @@ import org.junit.Test;
 /**
  * Unit test for {@link alluxio.security.group.provider.IdentityUserGroupsMapping}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class IdentityUserGroupsMappingTest {
 
   /**

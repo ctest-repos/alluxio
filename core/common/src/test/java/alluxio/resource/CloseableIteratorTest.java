@@ -11,6 +11,11 @@
 
 package alluxio.resource;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import com.google.common.collect.Iterators;
 import com.google.common.collect.Lists;
 import org.junit.Assert;
@@ -23,6 +28,8 @@ import java.util.List;
 /**
  * Tests for {@link CloseableIterator} functions.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class CloseableIteratorTest {
   @Test
   public void concatTwo() {

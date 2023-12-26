@@ -11,6 +11,11 @@
 
 package alluxio.client.quota;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNull;
@@ -20,6 +25,8 @@ import org.junit.Test;
 /**
  * Tests for CacheScope.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class CacheScopeTest {
 
   @Test

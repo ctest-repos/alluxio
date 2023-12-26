@@ -11,6 +11,11 @@
 
 package alluxio.wire;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -23,6 +28,8 @@ import java.util.Optional;
 /**
  * Unit tests for {@link InconsistentProperty}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class InconsistentPropertyTest {
 
   @Test

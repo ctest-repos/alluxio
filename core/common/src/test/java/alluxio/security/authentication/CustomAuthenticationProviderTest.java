@@ -11,6 +11,11 @@
 
 package alluxio.security.authentication;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertTrue;
 
 import alluxio.security.authentication.plain.CustomAuthenticationProvider;
@@ -24,6 +29,8 @@ import javax.security.sasl.AuthenticationException;
 /**
  * Tests the {@link CustomAuthenticationProvider} class.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class CustomAuthenticationProviderTest {
 
   /**

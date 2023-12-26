@@ -11,6 +11,11 @@
 
 package alluxio.grpc;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
@@ -31,6 +36,8 @@ import java.util.stream.Collectors;
 /**
  * Unit tests for {@link GrpcChannelPool}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class GrpcChannelPoolTest {
 
   private static InstancedConfiguration sConf = Configuration.copyGlobal();

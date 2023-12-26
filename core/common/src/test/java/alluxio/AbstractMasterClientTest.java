@@ -11,6 +11,11 @@
 
 package alluxio;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import alluxio.conf.Configuration;
 import alluxio.exception.status.UnavailableException;
 import alluxio.grpc.ServiceType;
@@ -30,6 +35,8 @@ import java.util.List;
 /**
  * Unit tests for {@link AbstractMasterClientTest}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class AbstractMasterClientTest {
   static class TestAbstractClient extends AbstractMasterClient {
 

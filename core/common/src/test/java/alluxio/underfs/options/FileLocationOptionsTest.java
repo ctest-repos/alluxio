@@ -11,6 +11,11 @@
 
 package alluxio.underfs.options;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 
 import alluxio.test.util.CommonUtils;
@@ -22,6 +27,8 @@ import java.io.IOException;
 /**
  * Tests for the {@link FileLocationOptions} class.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class FileLocationOptionsTest {
   /**
    * Tests for default {@link FileLocationOptions}.

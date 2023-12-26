@@ -11,6 +11,11 @@
 
 package alluxio;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
@@ -22,6 +27,8 @@ import java.io.PrintStream;
 /**
  * Unit tests for {@link SystemOutRule}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class SystemOutRuleTest {
   private static final ByteArrayOutputStream OUTPUT = new ByteArrayOutputStream();
   private static final PrintStream ORIGINAL_SYSTEM_OUT = System.out;

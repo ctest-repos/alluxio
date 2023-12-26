@@ -11,6 +11,11 @@
 
 package alluxio.security.authentication;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import alluxio.ConfigurationRule;
 import alluxio.conf.Configuration;
 import alluxio.conf.InstancedConfiguration;
@@ -33,6 +38,8 @@ import javax.security.sasl.AuthorizeCallback;
 /**
  * Tests the {@link PlainSaslServerCallbackHandler} class.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class PlainSaslServerCallbackHandlerTest {
   private CallbackHandler mPlainServerCBHandler;
 

@@ -11,6 +11,11 @@
 
 package alluxio;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.mockito.ArgumentMatchers.any;
@@ -30,6 +35,8 @@ import org.junit.runners.model.Statement;
 /**
  * Unit tests for {@link UnderFileSystemFactoryRegistryRule}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class UnderFileSystemFactoryRegistryRuleTest {
   private static final String UFS_PATH = "test://foo";
 

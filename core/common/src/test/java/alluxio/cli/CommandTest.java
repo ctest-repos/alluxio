@@ -11,6 +11,11 @@
 
 package alluxio.cli;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static alluxio.exception.ExceptionMessage.INVALID_ARGS_NUM;
 import static org.junit.Assert.assertEquals;
 
@@ -24,6 +29,8 @@ import org.junit.rules.ExpectedException;
 /**
  * Unit tests for {@link Command}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class CommandTest {
 
   private static final String COMMAND_NAME = "TestCommand";

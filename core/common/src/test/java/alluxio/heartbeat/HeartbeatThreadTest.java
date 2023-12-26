@@ -11,6 +11,11 @@
 
 package alluxio.heartbeat;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 
 import alluxio.conf.Configuration;
@@ -39,6 +44,8 @@ import javax.annotation.Nullable;
  * thread timing. Instead, test cases can dictate an ordering between threads. Here are the
  * steps required for using {@link ScheduledTimer}.
  *
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
  * 1. Set the timer class to use {@link ScheduledTimer}. This tells the heartbeat context
  * that the given heartbeat thread will be using a schedule based timer, instead of a
  * sleeping based timer. This is done with:

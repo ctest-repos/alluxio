@@ -11,6 +11,11 @@
 
 package alluxio;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
@@ -25,6 +30,8 @@ import org.junit.runners.model.Statement;
 /**
  * Unit tests for {@link AuthenticatedUserRule}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class AuthenticatedUserRuleTest {
   private static final String TESTCASE_USER = "testcase-user";
   private static final String RULE_USER = "rule-user";

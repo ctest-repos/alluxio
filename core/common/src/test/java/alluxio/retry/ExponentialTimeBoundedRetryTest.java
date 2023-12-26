@@ -11,6 +11,11 @@
 
 package alluxio.retry;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.hamcrest.Matchers.greaterThanOrEqualTo;
 import static org.hamcrest.Matchers.lessThanOrEqualTo;
 import static org.junit.Assert.assertFalse;
@@ -30,6 +35,8 @@ import java.util.Iterator;
 /**
  * Unit tests for {@link ExponentialTimeBoundedRetry}.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public final class ExponentialTimeBoundedRetryTest {
   @Test
   public void exponentialBackoff() throws InterruptedException {
